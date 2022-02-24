@@ -1,0 +1,124 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *, *::after, *::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: sans-serif;
+    min-height: 100vh;
+
+    background-color: deepskyblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+      
+  #vbg{
+      position:absolute;
+      z-index: -1;
+      right: 0;
+      bottom: 0;
+      min-height: 100%;
+      min-width: 100%;
+  }
+  
+  #slider {
+    height: 60vh;
+    width: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    perspective: 100rem;
+
+  }
+
+  #slider__cards {
+    display: inline-block;
+    position: relative;
+    width: 300px;
+    height: 168.6px;
+    transform-style: preserve-3d;
+    transform: translateZ(-25rem);
+    transition: transform 0.3s ease-in;
+
+  }
+
+  @keyframes image_blur {
+    0% { filter: blur(0px);}
+    50% { filter: blur(5px);}
+    100% {filter: blur(0px);}
+}
+
+  #slider__img {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    
+
+
+  }
+  #slider__card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 0.5rem;
+    font-size: 3em;
+    font-weight: 700;
+
+
+
+  }
+
+
+
+  #slider__card:nth-child(1) {
+    transform: rotateY(0deg) translateZ(25rem);
+  }
+  #slider__card:nth-child(2) {
+    transform: rotateY(45deg) translateZ(25rem);
+  }
+  #slider__card:nth-child(3) {
+    transform: rotateY(90deg) translateZ(25rem);
+  }
+  #slider__card:nth-child(4) {
+    transform: rotateY(135deg) translateZ(25rem);
+  }
+  #slider__card:nth-child(5) {
+    transform: rotateY(180deg) translateZ(25rem);
+  }
+  #slider__card:nth-child(6) {
+    transform: rotateY(225deg) translateZ(25rem);
+  }
+  #slider__card:nth-child(7) {
+    transform: rotateY(270deg) translateZ(25rem);
+  }
+  #slider__card:nth-child(8) {
+    transform: rotateY(315deg) translateZ(25rem);
+  }
+
+  
+
+  .slider__btn {
+    outline: none;
+    border: none;
+    border-radius: 0.2rem;
+    background: #ffae00;
+    padding: 0.5em 1em;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #ffffff;
+    cursor: pointer;
+    margin: 0 10rem;
+  }
+
+  .slider__btn:hover {
+    transform: scale(1.04);
+    background: #000000;
+  }
