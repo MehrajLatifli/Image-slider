@@ -442,7 +442,7 @@ function button(){
 window.onload=function main(){
     
     
-    alert("This project work host (ex: localhost)");
+    alert("This project work with host (ex: localhost)");
 
     getNonRepeatingRndIntegers(0,3);
     
